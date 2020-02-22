@@ -1,0 +1,39 @@
+{
+  "name": "paulogoncalves",
+  "version": "0.0.1",
+  "description": "Cartão de apresentação pessoal",
+  "author": "Paulo Gonçalves <paulorochag@hotmail.com> (https://www.linkedin.com/in/paulo-goncalves/)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PauloGoncalvesBH/card.git"
+  },
+  "bin": {
+    "paulogoncalves": "./bin/main.js"
+  },
+  "files": [
+    "bin/"
+  ],
+  "scripts": {
+    "build": "node src/build.js",
+    "card": "node ./bin/main.js",
+    "dev": "npm run build && npm run card",
+    "lint": "standard",
+    "lint:fix": "standard --fix",
+    "prepublishOnly": "npm run dev"
+  },
+  "dependencies": {
+    "yargs": "^15.1.0"
+  },
+  "devDependencies": {
+    "boxen": "^4.2.0",
+    "chalk": "^3.0.0",
+    "husky": "^4.2.3",
+    "standard": "^14.3.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
+  }
+}
