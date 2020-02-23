@@ -16,7 +16,9 @@ const dados = {
   tag: chalk.blue.bold('[tag]'),
   tagSort: '    ' + 'sort = ' + chalk.rgb(110, 110, 110)('version:refname'),
   colorBranch: chalk.blue.bold('[color "branch"]'),
-  colorBranchUpstream: '    ' + 'upstream = ' + chalk.cyan('cyan')
+  colorBranchUpstream: '    ' + 'upstream = ' + chalk.cyan('cyan'),
+  core: chalk.blue.bold('[core]'),
+  coreAutoCrlf: '    ' + 'autocrlf = ' + chalk.rgb(110, 110, 110)('false')
 }
 
 const novaLinha = '\n'
@@ -34,7 +36,9 @@ const conteudo = dados.gitconfig + novaLinha +
                  dados.tag + novaLinha +
                  dados.tagSort + novaLinha +
                  dados.colorBranch + novaLinha +
-                 dados.colorBranchUpstream
+                 dados.colorBranchUpstream + novaLinha +
+                 dados.core + novaLinha +
+                 dados.coreAutoCrlf
 
 const nomeArquivo = 'gitconfig'
 
