@@ -15,7 +15,7 @@ const dados = {
   labelGitHub: chalk.green.bold('    GitHub:'),
   labelLinkedIn: chalk.red.bold('  LinkedIn:'),
   labelDevto: chalk.yellow.bold('    Dev.to:'),
-  labelTwitter: chalk.cyan.bold('   Twitter:'),
+  labelTwitter: chalk.cyan.bold('   Twitter:')
 }
 
 const novaLinha = '\n'
