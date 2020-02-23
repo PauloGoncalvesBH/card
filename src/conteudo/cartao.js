@@ -2,14 +2,16 @@
 
 const chalk = require('chalk')
 
+const { cinza, novaLinha } = require('../constants_and_utils/constants')
+
 const dados = {
   nome: '             ' + chalk.white.bold('Paulo Gonçalves'),
   trabalho: chalk.white('             Quality Assurance'),
-  email: chalk.rgb(110, 110, 110)('paulorochag@hotmail.com'),
-  github: chalk.rgb(110, 110, 110)('https://github.com/paulogoncalvesbh'),
-  linkedin: chalk.rgb(110, 110, 110)('https://linkedin.com/in/paulo-goncalves'),
-  devto: chalk.rgb(110, 110, 110)('https://dev.to/paulogoncalvesbh'),
-  twitter: chalk.rgb(110, 110, 110)('https://twitter.com/paulorgoncalves'),
+  email: chalk.rgb(cinza.red, cinza.green, cinza.blue)('paulorochag@hotmail.com'),
+  github: chalk.rgb(cinza.red, cinza.green, cinza.blue)('https://github.com/paulogoncalvesbh'),
+  linkedin: chalk.rgb(cinza.red, cinza.green, cinza.blue)('https://linkedin.com/in/paulo-goncalves'),
+  devto: chalk.rgb(cinza.red, cinza.green, cinza.blue)('https://dev.to/paulogoncalvesbh'),
+  twitter: chalk.rgb(cinza.red, cinza.green, cinza.blue)('https://twitter.com/paulorgoncalves'),
   npx: chalk.white('             npx paulogoncalves [-h | --help]'),
   labelEmail: chalk.blue.bold('     Email:'),
   labelGitHub: chalk.green.bold('    GitHub:'),
@@ -18,7 +20,6 @@ const dados = {
   labelTwitter: chalk.cyan.bold('   Twitter:')
 }
 
-const novaLinha = '\n'
 const heading = `${dados.nome}`
 const working = `${dados.trabalho}`
 const emailing = `${dados.labelEmail}  ${dados.email}`
@@ -40,9 +41,7 @@ const conteudo = heading + novaLinha +
                novaLinha +
                carding
 
-const nomeArquivo = 'cartao'
-
 module.exports = {
   conteudo,
-  nomeArquivo
+  nomeArquivo: 'cartao'
 }

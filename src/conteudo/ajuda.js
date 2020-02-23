@@ -2,17 +2,18 @@
 
 const chalk = require('chalk')
 
+const { cinza, novaLinha } = require('../constants_and_utils/constants')
+
 const dados = {
   titulo: '              ' + chalk.white.bold('Ajuda'),
   uso: 'Uso: npx paulogoncalves [opção]',
   opcao: 'Opções:',
   ajuda: '    -h, --help',
-  mensagemAjuda: chalk.rgb(110, 110, 110).italic('           Ajuda'),
+  mensagemAjuda: chalk.rgb(cinza.red, cinza.green, cinza.blue).italic('           Ajuda'),
   gitconfig: '    -gc, --gitconfig',
-  mensagemGitconfig: chalk.rgb(110, 110, 110).italic('     Gitconfig.ini')
+  mensagemGitconfig: chalk.rgb(cinza.red, cinza.green, cinza.blue).italic('     Gitconfig.ini')
 }
 
-const novaLinha = '\n'
 const conteudo = dados.titulo + novaLinha +
                  novaLinha +
                  dados.uso + novaLinha +
@@ -21,9 +22,7 @@ const conteudo = dados.titulo + novaLinha +
                  dados.ajuda + dados.mensagemAjuda + novaLinha +
                  dados.gitconfig + dados.mensagemGitconfig
 
-const nomeArquivo = 'ajuda'
-
 module.exports = {
   conteudo,
-  nomeArquivo
+  nomeArquivo: 'ajuda'
 }
