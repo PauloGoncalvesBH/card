@@ -9,6 +9,7 @@
     "url": "git+https://github.com/PauloGoncalvesBH/card.git"
   },
   "bin": {
+    "paulo": "./bin/main.js",
     "paulogoncalves": "./bin/main.js"
   },
   "files": [
