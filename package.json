@@ -25,7 +25,7 @@
     "standard": "^14.3.1"
   },
   "scripts": {
-    "build": "node src/build.js",
+    "build": "node ./src/build.js",
     "card": "node ./bin/main.js",
     "dev": "npm run build && npm run card",
     "lint": "standard",
