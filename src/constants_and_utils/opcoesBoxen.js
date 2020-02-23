@@ -4,6 +4,6 @@ module.exports = {
   padding: 1,
   margin: 1,
   backgroundColor: 'black',
-  borderColor: 'red',
+  borderColor: 'gray',
   borderStyle: 'doubleSingle'
 }

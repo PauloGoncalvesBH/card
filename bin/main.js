@@ -3,16 +3,24 @@
 
 'use strict'
 
-const argv = require('yargs').argv
 const { readFileSync } = require('fs')
 const { join } = require('path')
 
 const lerEImprimirConteudo = nomeArquivo => {
-  console.log(readFileSync(join(__dirname, `./conteudo/${nomeArquivo}`), 'utf8'))
+  console.log(readFileSync(join(__dirname, `./conteudo/${nomeArquivo}.txt`), 'utf8'))
 }
 
-if (argv.gitconfig) {
-  console.log('teste')
-} else {
-  lerEImprimirConteudo('cartao')
+switch (process.argv[2]) {
+  case undefined:
+    lerEImprimirConteudo('cartao')
+    break
+
+  case '-gc':
+  case '--gitconfig':
+    lerEImprimirConteudo('gitconfig')
+    break
+
+  default:
+    lerEImprimirConteudo('ajuda')
+    break
 }

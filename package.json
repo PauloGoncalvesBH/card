@@ -1,6 +1,6 @@
 {
   "name": "paulogoncalves",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Cartão de apresentação pessoal",
   "author": "Paulo Gonçalves <paulorochag@hotmail.com> (https://www.linkedin.com/in/paulo-goncalves/)",
   "license": "MIT",
@@ -14,9 +14,6 @@
   "files": [
     "bin/"
   ],
-  "dependencies": {
-    "yargs": "^15.1.0"
-  },
   "devDependencies": {
     "@commitlint/cli": "^8.3.5",
     "@commitlint/config-conventional": "^8.3.4",
