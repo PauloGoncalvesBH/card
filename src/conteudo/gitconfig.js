@@ -2,43 +2,37 @@
 
 const chalk = require('chalk')
 
-const dados = {
-  gitconfig: '                 ' + chalk.white.bold('Gitconfig.ini'),
-  user: chalk.blue.bold('[user]'),
-  userEmail: '    ' + 'email = ' + chalk.rgb(110, 110, 110)('paulorochag@hotmail.com'),
-  userName: '    ' + 'name = ' + chalk.rgb(110, 110, 110)('Paulo Gonçalves'),
-  alias: chalk.blue.bold('[alias]'),
-  aliasSt: '    ' + 'st = ' + chalk.rgb(110, 110, 110)('status -s -b'),
-  aliasLg: '    ' + 'lg = ' + chalk.rgb(110, 110, 110)('log --oneline --graph --decorate --all'),
-  push: chalk.blue.bold('[push]'),
-  pushDefault: '    ' + 'default = ' + chalk.rgb(110, 110, 110)('upstream'),
-  pushFollowTags: '    ' + 'followTags = ' + chalk.rgb(110, 110, 110)('true'),
-  tag: chalk.blue.bold('[tag]'),
-  tagSort: '    ' + 'sort = ' + chalk.rgb(110, 110, 110)('version:refname'),
-  colorBranch: chalk.blue.bold('[color "branch"]'),
-  colorBranchUpstream: '    ' + 'upstream = ' + chalk.cyan('cyan')
+const { cinza, novaLinha } = require('../constants_and_utils/constants')
+const { titulo, quantidadeDeEspaco } = require('../constants_and_utils/utils')
+
+const topico = titulo => {
+  return chalk.blue.bold(`[${titulo}]${novaLinha}`)
 }
 
-const novaLinha = '\n'
-const conteudo = dados.gitconfig + novaLinha +
-                 novaLinha +
-                 dados.user + novaLinha +
-                 dados.userEmail + novaLinha +
-                 dados.userName + novaLinha +
-                 dados.alias + novaLinha +
-                 dados.aliasSt + novaLinha +
-                 dados.aliasLg + novaLinha +
-                 dados.push + novaLinha +
-                 dados.pushDefault + novaLinha +
-                 dados.pushFollowTags + novaLinha +
-                 dados.tag + novaLinha +
-                 dados.tagSort + novaLinha +
-                 dados.colorBranch + novaLinha +
-                 dados.colorBranchUpstream
+const subtopico = (chave, valor, adicionarNovaLinha = true) => {
+  const subtopico = `${quantidadeDeEspaco(4)}${chave} = ${chalk.rgb(cinza.red, cinza.green, cinza.blue)(valor)}`
+  return (adicionarNovaLinha) ? `${subtopico}${novaLinha}` : subtopico
+}
 
-const nomeArquivo = 'gitconfig'
+const conteudo =
+  titulo('Gitconfig.ini') +
+  topico('user') +
+  subtopico('email', 'paulorochag@hotmail.com') +
+  subtopico('name', 'Paulo Gonçalves') +
+  topico('alias') +
+  subtopico('st', 'status --short --branch') +
+  subtopico('lg', 'log --oneline --graph --decorate --all') +
+  topico('push') +
+  subtopico('default', 'upstream') +
+  subtopico('followTags', 'true') +
+  topico('tag') +
+  subtopico('sort', 'version:refname') +
+  topico('color "branch"') +
+  subtopico('upstream', 'cyan') +
+  topico('core') +
+  subtopico('autocrlf', 'false', false)
 
 module.exports = {
   conteudo,
-  nomeArquivo
+  nomeArquivo: 'gitconfig'
 }

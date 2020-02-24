@@ -2,28 +2,23 @@
 
 const chalk = require('chalk')
 
-const dados = {
-  titulo: '              ' + chalk.white.bold('Ajuda'),
-  uso: 'Uso: npx paulogoncalves [opção]',
-  opcao: 'Opções:',
-  ajuda: '    -h, --help',
-  mensagemAjuda: chalk.rgb(110, 110, 110).italic('           Ajuda'),
-  gitconfig: '    -gc, --gitconfig',
-  mensagemGitconfig: chalk.rgb(110, 110, 110).italic('     Gitconfig.ini')
+const { cinza, novaLinha } = require('../constants_and_utils/constants')
+const { titulo } = require('../constants_and_utils/utils')
+
+const detalheDoComando = (explicacao, adicionarNovaLinha = true) => {
+  const detalheDoComando = chalk.rgb(cinza.red, cinza.green, cinza.blue).italic(explicacao)
+  return (adicionarNovaLinha) ? `${detalheDoComando}${novaLinha}` : detalheDoComando
 }
 
-const novaLinha = '\n'
-const conteudo = dados.titulo + novaLinha +
-                 novaLinha +
-                 dados.uso + novaLinha +
-                 novaLinha +
-                 dados.opcao + novaLinha +
-                 dados.ajuda + dados.mensagemAjuda + novaLinha +
-                 dados.gitconfig + dados.mensagemGitconfig
-
-const nomeArquivo = 'ajuda'
+const conteudo =
+  titulo('Ajuda') +
+  `Uso: npx paulogoncalves [opção]${novaLinha}` +
+  novaLinha +
+  `Opções:${novaLinha}` +
+  `    -h, --help           ${detalheDoComando('Ajuda')}` +
+  `    -gc, --gitconfig     ${detalheDoComando('Gitconfig.ini', false)}`
 
 module.exports = {
   conteudo,
-  nomeArquivo
+  nomeArquivo: 'ajuda'
 }
