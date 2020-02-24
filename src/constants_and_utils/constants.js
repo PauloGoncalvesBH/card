@@ -1,5 +1,12 @@
 'use strict'
 
+const cinza = {
+  red: 110,
+  green: 110,
+  blue: 110
+}
+
+const espacamentoDoTitulo = 13
 const novaLinha = '\n'
 
 const opcoesBoxen = {
@@ -10,14 +17,9 @@ const opcoesBoxen = {
   borderStyle: 'doubleSingle'
 }
 
-const cinza = {
-  red: 110,
-  green: 110,
-  blue: 110
-}
-
 module.exports = {
   cinza,
+  espacamentoDoTitulo,
   novaLinha,
   opcoesBoxen
 }

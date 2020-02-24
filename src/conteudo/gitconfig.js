@@ -3,7 +3,7 @@
 const chalk = require('chalk')
 
 const { cinza, novaLinha } = require('../constants_and_utils/constants')
-const { quantidadeDeEspaco } = require('../constants_and_utils/utils')
+const { titulo, quantidadeDeEspaco } = require('../constants_and_utils/utils')
 
 const topico = titulo => {
   return chalk.blue.bold(`[${titulo}]${novaLinha}`)
@@ -15,8 +15,7 @@ const subtopico = (chave, valor, adicionarNovaLinha = true) => {
 }
 
 const conteudo =
-  `${quantidadeDeEspaco(17)}${chalk.white.bold('Gitconfig.ini')}${novaLinha}` +
-  novaLinha +
+  titulo('Gitconfig.ini') +
   topico('user') +
   subtopico('email', 'paulorochag@hotmail.com') +
   subtopico('name', 'Paulo Gonçalves') +

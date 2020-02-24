@@ -1,10 +1,11 @@
 'use strict'
 
 const boxen = require('boxen')
+const chalk = require('chalk')
 const { writeFileSync } = require('fs')
 const { join } = require('path')
 
-const { opcoesBoxen } = require('./constants')
+const { espacamentoDoTitulo, novaLinha, opcoesBoxen } = require('./constants')
 
 const criarArquivo = ({ nomeArquivo, conteudo }) => {
   const diretorio = join(__dirname, `../../bin/conteudo/${nomeArquivo}.txt`)
@@ -20,7 +21,12 @@ const quantidadeDeEspaco = numeroDeEspacos => {
   return string
 }
 
+const titulo = titulo => {
+  return quantidadeDeEspaco(espacamentoDoTitulo) + chalk.white.bold(titulo) + novaLinha + novaLinha
+}
+
 module.exports = {
   criarArquivo,
-  quantidadeDeEspaco
+  quantidadeDeEspaco,
+  titulo
 }

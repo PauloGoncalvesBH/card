@@ -3,7 +3,7 @@
 const chalk = require('chalk')
 
 const { cinza, novaLinha } = require('../constants_and_utils/constants')
-const { quantidadeDeEspaco } = require('../constants_and_utils/utils')
+const { titulo } = require('../constants_and_utils/utils')
 
 const detalheDoComando = (explicacao, adicionarNovaLinha = true) => {
   const detalheDoComando = chalk.rgb(cinza.red, cinza.green, cinza.blue).italic(explicacao)
@@ -11,8 +11,7 @@ const detalheDoComando = (explicacao, adicionarNovaLinha = true) => {
 }
 
 const conteudo =
-  `${quantidadeDeEspaco(13)}${chalk.white.bold('Ajuda')}${novaLinha}` +
-  novaLinha +
+  titulo('Ajuda') +
   `Uso: npx paulogoncalves [opção]${novaLinha}` +
   novaLinha +
   `Opções:${novaLinha}` +
