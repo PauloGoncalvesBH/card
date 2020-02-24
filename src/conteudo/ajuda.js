@@ -3,24 +3,21 @@
 const chalk = require('chalk')
 
 const { cinza, novaLinha } = require('../constants_and_utils/constants')
+const { quantidadeDeEspaco } = require('../constants_and_utils/utils')
 
-const dados = {
-  titulo: '              ' + chalk.white.bold('Ajuda'),
-  uso: 'Uso: npx paulogoncalves [opção]',
-  opcao: 'Opções:',
-  ajuda: '    -h, --help',
-  mensagemAjuda: chalk.rgb(cinza.red, cinza.green, cinza.blue).italic('           Ajuda'),
-  gitconfig: '    -gc, --gitconfig',
-  mensagemGitconfig: chalk.rgb(cinza.red, cinza.green, cinza.blue).italic('     Gitconfig.ini')
+const detalheDoComando = (explicacao, adicionarNovaLinha = true) => {
+  const detalheDoComando = chalk.rgb(cinza.red, cinza.green, cinza.blue).italic(explicacao)
+  return (adicionarNovaLinha) ? `${detalheDoComando}${novaLinha}` : detalheDoComando
 }
 
-const conteudo = dados.titulo + novaLinha +
-                 novaLinha +
-                 dados.uso + novaLinha +
-                 novaLinha +
-                 dados.opcao + novaLinha +
-                 dados.ajuda + dados.mensagemAjuda + novaLinha +
-                 dados.gitconfig + dados.mensagemGitconfig
+const conteudo =
+  `${quantidadeDeEspaco(13)}${chalk.white.bold('Ajuda')}${novaLinha}` +
+  novaLinha +
+  `Uso: npx paulogoncalves [opção]${novaLinha}` +
+  novaLinha +
+  `Opções:${novaLinha}` +
+  `    -h, --help           ${detalheDoComando('Ajuda')}` +
+  `    -gc, --gitconfig     ${detalheDoComando('Gitconfig.ini', false)}`
 
 module.exports = {
   conteudo,
