@@ -2,15 +2,15 @@
 
 const chalk = require('chalk')
 
-const { cinza, novaLinha } = require('../constants_and_utils/constants')
-const { titulo, quantidadeDeEspaco } = require('../constants_and_utils/utils')
+const { novaLinha } = require('../constants_and_utils/constants')
+const { chalkCinza, titulo, quantidadeDeEspaco } = require('../constants_and_utils/utils')
 
 const valores = texto => {
-  return `  ${chalk.rgb(cinza.red, cinza.green, cinza.blue)(texto)}${novaLinha}`
+  return `  ${chalkCinza(texto)}${novaLinha}`
 }
 
 const conteudo =
-  titulo('Paulo Gonçalves') +
+  titulo({ titulo: 'Paulo Gonçalves' }) +
   quantidadeDeEspaco(13) + chalk.white('Quality Assurance') + novaLinha +
   novaLinha +
   chalk.blue.bold('     Email:') + valores('paulorochag@hotmail.com') +

@@ -7,6 +7,7 @@ const cinza = {
 }
 
 const espacamentoDoTitulo = 13
+const espacamentoDoSubtitulo = espacamentoDoTitulo + 1
 const novaLinha = '\n'
 
 const opcoesBoxen = {
@@ -20,6 +21,7 @@ const opcoesBoxen = {
 module.exports = {
   cinza,
   espacamentoDoTitulo,
+  espacamentoDoSubtitulo,
   novaLinha,
   opcoesBoxen
 }

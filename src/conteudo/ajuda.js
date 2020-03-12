@@ -11,12 +11,13 @@ const detalheDoComando = (explicacao, adicionarNovaLinha = true) => {
 }
 
 const conteudo =
-  titulo('Ajuda') +
+  titulo({ titulo: 'Ajuda' }) +
   `Uso: npx paulogoncalves [opção]${novaLinha}` +
   novaLinha +
   `Opções:${novaLinha}` +
   `    -h, --help           ${detalheDoComando('Ajuda')}` +
-  `    -gc, --gitconfig     ${detalheDoComando('Gitconfig.ini', false)}`
+  `    -gc, --gitconfig     ${detalheDoComando('Gitconfig.ini')}` +
+  `    -vs, --vscode        ${detalheDoComando('Settings.json', false)}`
 
 module.exports = {
   conteudo,
