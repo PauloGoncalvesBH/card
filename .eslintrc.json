@@ -1,0 +1,8 @@
+{
+  "extends": [
+    "eslint-config-standard"
+  ],
+  "rules": {
+    "no-template-curly-in-string": "off"
+  }
+}
