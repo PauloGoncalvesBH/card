@@ -20,6 +20,11 @@ switch (process.argv[2]) {
     lerEImprimirConteudo('gitconfig')
     break
 
+  case '-vs':
+  case '--vscode':
+    lerEImprimirConteudo('vscode')
+    break
+
   default:
     lerEImprimirConteudo('ajuda')
     break
