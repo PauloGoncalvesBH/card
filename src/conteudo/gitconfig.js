@@ -22,6 +22,7 @@ const conteudo =
   topico('alias') +
   subtopico('st', 'status --short --branch') +
   subtopico('lg', 'log --oneline --graph --decorate --all') +
+  subtopico('lg-diff-origin', 'lg origin/master..HEAD') +
   topico('push') +
   subtopico('default', 'upstream') +
   subtopico('followTags', 'true') +
@@ -30,7 +31,8 @@ const conteudo =
   topico('color "branch"') +
   subtopico('upstream', 'cyan') +
   topico('core') +
-  subtopico('autocrlf', 'false', false)
+  subtopico('autocrlf', 'false') +
+  subtopico('editor', 'vi', false)
 
 module.exports = {
   conteudo,

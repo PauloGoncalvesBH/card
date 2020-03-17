@@ -15,8 +15,9 @@ const conteudo =
   chalkCinza('{') + novaLinha +
   objeto('workbench.colorTheme', 'Dracula Soft') +
   objeto('workbench.iconTheme', 'vscode-icons') +
-  objeto('editor.tabSize', 2) +
   objeto('editor.minimap.enabled', false) +
+  objeto('editor.renderWhitespace', 'all') +
+  objeto('editor.tabSize', 2) +
   objeto('window.title', '${dirty} ${activeEditorMedium} | ${rootName} ${dirty}') +
   objeto('scm.diffDecorationsGutterWidth', 5) +
   objeto('outline.showProperties', false) +

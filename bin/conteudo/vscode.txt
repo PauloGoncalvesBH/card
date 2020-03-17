@@ -7,8 +7,9 @@
    [90m│[39m[40m   [38;2;110;110;110m{[39m                                                                             [49m[90m│[39m
    [90m│[39m[40m   [96m    "workbench.colorTheme": [39m[93m"Dracula Soft"[39m                                    [49m[90m│[39m
    [90m│[39m[40m   [96m    "workbench.iconTheme": [39m[93m"vscode-icons"[39m                                     [49m[90m│[39m
-   [90m│[39m[40m   [96m    "editor.tabSize": [39m2                                                       [49m[90m│[39m
    [90m│[39m[40m   [96m    "editor.minimap.enabled": [39mfalse                                           [49m[90m│[39m
+   [90m│[39m[40m   [96m    "editor.renderWhitespace": [39m[93m"all"[39m                                          [49m[90m│[39m
+   [90m│[39m[40m   [96m    "editor.tabSize": [39m2                                                       [49m[90m│[39m
    [90m│[39m[40m   [96m    "window.title": [39m[93m"${dirty} ${activeEditorMedium} | ${rootName} ${dirty}"[39m   [49m[90m│[39m
    [90m│[39m[40m   [96m    "scm.diffDecorationsGutterWidth": [39m5                                       [49m[90m│[39m
    [90m│[39m[40m   [96m    "outline.showProperties": [39mfalse                                           [49m[90m│[39m
