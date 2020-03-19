@@ -1,6 +1,6 @@
 ## Cartão de apresentação
 
-[![npm version](https://badge.fury.io/js/paulogoncalves.svg)](https://badge.fury.io/js/paulogoncalves)
+[![npm version](https://badge.fury.io/js/paulogoncalves.svg)](https://npmjs.com/package/paulogoncalves)
 
 <p align="center"><img src="./img/Card.png"></p>
 
