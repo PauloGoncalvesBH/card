@@ -21,8 +21,9 @@ const conteudo =
   subtopico('name', 'Paulo Gonçalves') +
   topico('alias') +
   subtopico('st', 'status --short --branch') +
-  subtopico('lg', 'log --oneline --graph --decorate --all') +
-  subtopico('lg-diff-origin', 'lg origin/master..HEAD') +
+  subtopico('lg', 'log --oneline --graph --decorate') +
+  subtopico('lg-diff-origin', 'lg origin/main..HEAD') +
+  subtopico('lg-diff-origin-master', 'lg origin/master..HEAD') +
   topico('push') +
   subtopico('default', 'upstream') +
   subtopico('followTags', 'true') +
@@ -32,7 +33,9 @@ const conteudo =
   subtopico('upstream', 'cyan') +
   topico('core') +
   subtopico('autocrlf', 'false') +
-  subtopico('editor', 'vi', false)
+  subtopico('editor', 'vim') +
+  topico('init') +
+  subtopico('defaultBranch', 'main', false)
 
 module.exports = {
   conteudo,
